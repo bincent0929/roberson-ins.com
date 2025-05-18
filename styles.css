@@ -6,10 +6,6 @@
     text-align: center;
 }
 
-.call {
-    text-align: center;
-}
-
 .insurance-for {
     text-align: center;
 }
@@ -22,3 +18,26 @@
     height: auto;
     width: 20%;
 }
+
+.biglogo-container {
+    text-align: center;
+}
+
+.biglogo {
+    height: auto;
+    width: 50%;
+}
+
+.call {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    color: #1971c2;
+    text-align: center;
+}
+
+/*
+h1, h2 {
+    color: #1971c2;
+}
+*/
