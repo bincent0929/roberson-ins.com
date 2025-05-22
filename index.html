@@ -5,56 +5,37 @@
   <title>Roberson & Sons Insurance</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="main page for Roberson & Sons Insurance" />
-  <link rel="icon" href="/images/truck-favicon.svg">
+  <link rel="icon" href="./images/logo-images/truck-favicon.svg">
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/slideshow.css">
-  <script src="./scripts/slideshow.js"></script>
+  <link rel="stylesheet" href="./styles/navigation.css">
 </head>
 <header>
-    <!-- https://chatgpt.com/c/6827e5cf-6f78-800a-8c40-6496e899eaa4 -->
-    <a href="index.html">
-        <img class="logo" src="/images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo">
-    </a>
-    <nav>
-        <ul>
-            <li> 
-              <a title="Contact" href="contact.html">Contact</a> 
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-        </ul>
-    </nav>
-</header>
-<body>
+  <div class="topnav">
+    <a href="./contact.html">Contact</a>
+    <a href="./about.html">Our Team</a>
+    <a class="active" href="./index.html">Home</a>
+  </div>
   <div class = "biglogo-container">
-    <img class="biglogo" src="/images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo">
+    <img class="biglogo" src="/images/logo-images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo">
   </div>
   <h1 class="call">Call Today! 800-801-0942</h1>
-
+</header>
+<body>
   <!-- Slideshow container -->
   <div class="slideshow-container">
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="./images/main-page-slideshow/semis-1800x900.jpg" style="width:100%">
-      <div class="text">Caption Text</div>
+      <img src="./images/main-page-slideshow/semis-1800x900.jpg" alt="semi trucks" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="./images/main-page-slideshow/combine-1800x900.jpg" style="width:100%">
-      <div class="text">Caption Two</div>
+      <img src="./images/main-page-slideshow/combine-1800x900.jpg" alt="combine in a field" style="width:100%">
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="./images/main-page-slideshow/logging-1800x900.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
+      <img src="./images/main-page-slideshow/logging-1800x900.jpg" alt="logging machine" style="width:100%">
     </div>
 
     <!-- Next and previous buttons -->
@@ -62,6 +43,12 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
   <br>
+  <!-- 
+    needs to run after to be able to change the display state for the slides
+    this is due to the fact that the script can't change the value if it's not already
+    on the screen or loaded.
+  -->
+  <script src="./scripts/slideshow.js"></script>
 
   <div class = "insurance-for">
     <h2>Insurance For Transporation</h2>
