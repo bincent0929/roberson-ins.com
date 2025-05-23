@@ -1,3 +1,4 @@
+/* got this from: https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
@@ -24,4 +25,9 @@
 .topnav a.active {
   background-color: #1971c2;
   color: white;
+}
+
+.toplogo {
+    height: auto;
+    width: 10%;
 }
