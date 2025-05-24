@@ -7,7 +7,11 @@ import (
 	"strings"
 
 	"gopkg.in/gomail.v2"
-)
+	/**
+	  I want to swap gomail.v2 for net/smtp
+	  because I don't think I'll need the features
+	  that are in gomail.v2
+	*/)
 
 func loadEnv(path string) error {
 	f, err := os.Open(path)
@@ -15,6 +19,7 @@ func loadEnv(path string) error {
 		return err
 	}
 	defer f.Close()
+	// this sets it to close the file before the function returns
 
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
