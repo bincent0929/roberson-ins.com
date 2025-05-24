@@ -2,13 +2,14 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"log"
+	"net/smtp"
 	"os"
 	"strings"
-
-	"gopkg.in/gomail.v2"
+	//"gopkg.in/gomail.v2"
 	/**
-	  I want to swap gomail.v2 for net/smtp
+	  I want to swap gomail.v2 for
 	  because I don't think I'll need the features
 	  that are in gomail.v2
 	*/)
@@ -36,17 +37,33 @@ func main() {
 		log.Fatalf("Error loading .env: %v", err)
 	}
 
-	user := os.Getenv("SMTP_USER")
-	pass := os.Getenv("SMTP_PASS")
+	// Load creds from env (as discussed)
+	host := os.Getenv("SMTP_HOST") // e.g. "smtp.example.com"
+	port := os.Getenv("SMTP_PORT") // e.g. "587"
+	user := os.Getenv("SMTP_USER") // your SMTP username
+	pass := os.Getenv("SMTP_PASS") // your SMTP password
 
-	m := gomail.NewMessage()
-	m.SetHeader("From", user)
-	m.SetHeader("To", "test@varmail.org")
-	m.SetHeader("Subject", "Hello with gomail")
-	m.SetBody("text/plain", "This is a test email with gomail.")
+	auth := smtp.PlainAuth("", user, pass, host)
 
-	d := gomail.NewDialer("mail.gmx.com", 587, user, pass)
-	if err := d.DialAndSend(m); err != nil {
-		panic(err)
+	// Build the message
+	var msg bytes.Buffer
+	msg.WriteString("From: " + user + "\r\n")
+	msg.WriteString("To: test@varmail.org\r\n")
+	msg.WriteString("Subject: Hello from net/smtp!\r\n")
+	msg.WriteString("MIME-Version: 1.0\r\n")
+	msg.WriteString(`Content-Type: text/html; charset="UTF-8"` + "\r\n")
+	msg.WriteString("\r\n") // blank line between headers and body
+	msg.WriteString(`<h1>Hi there</h1><p>This is an <strong>HTML</strong> email.</p>`)
+
+	// Send it
+	addr := host + ":" + port
+	if err := smtp.SendMail(addr, auth,
+		user,
+		[]string{"test@varmail.org"},
+		msg.Bytes(),
+	); err != nil {
+		log.Fatalf("failed to send email: %v", err)
 	}
+
+	log.Println("Email sent successfully!")
 }
