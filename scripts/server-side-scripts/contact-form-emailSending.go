@@ -1,18 +1,16 @@
+// scripts/server-side-scripts/main.go
 package main
 
 import (
 	"bufio"
 	"bytes"
+	"fmt"
 	"log"
+	"net/http"
 	"net/smtp"
 	"os"
 	"strings"
-	//"gopkg.in/gomail.v2"
-	/**
-	  I want to swap gomail.v2 for
-	  because I don't think I'll need the features
-	  that are in gomail.v2
-	*/)
+)
 
 func loadEnv(path string) error {
 	f, err := os.Open(path)
@@ -32,38 +30,63 @@ func loadEnv(path string) error {
 	return scanner.Err()
 }
 
-func main() {
+// sendHandler processes form submissions at /send
+func sendHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodPost {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	if err := r.ParseForm(); err != nil {
+		http.Error(w, "Bad request", http.StatusBadRequest)
+		return
+	}
+
+	// Extract form values
+	fname := r.FormValue("fname")
+	lname := r.FormValue("lname")
+	email := r.FormValue("email")
+	subject := r.FormValue("subject")
+	message := r.FormValue("message")
+
 	if err := loadEnv(".env"); err != nil && !os.IsNotExist(err) {
 		log.Fatalf("Error loading .env: %v", err)
 	}
 
-	// Load creds from env (as discussed)
-	host := os.Getenv("SMTP_HOST") // e.g. "smtp.example.com"
-	port := os.Getenv("SMTP_PORT") // e.g. "587"
-	user := os.Getenv("SMTP_USER") // your SMTP username
-	pass := os.Getenv("SMTP_PASS") // your SMTP password
+	// change to who's receiving the email
+	receiver_email := "test@varmail.org"
+	user := os.Getenv("SMTP_USER")
+	pass := os.Getenv("SMTP_PASS")
+	host := os.Getenv("SMTP_HOST")
+	port := os.Getenv("SMTP_PORT")
 
+	// Build the email body
+	var body bytes.Buffer
+	body.WriteString("From: " + user + "\r\n")
+	body.WriteString("To: " + receiver_email + "\r\n")
+	body.WriteString("Subject: " + subject + "\r\n")
+	body.WriteString("MIME-Version: 1.0\r\n")
+	body.WriteString(`Content-Type: text/plain; charset="UTF-8"` + "\r\n\r\n")
+	body.WriteString(fmt.Sprintf("Name: %s %s\nEmail: %s\n\n%s", fname, lname, email, message))
+
+	// Send via SMTP
 	auth := smtp.PlainAuth("", user, pass, host)
-
-	// Build the message
-	var msg bytes.Buffer
-	msg.WriteString("From: " + user + "\r\n")
-	msg.WriteString("To: test@varmail.org\r\n")
-	msg.WriteString("Subject: Hello from net/smtp!\r\n")
-	msg.WriteString("MIME-Version: 1.0\r\n")
-	msg.WriteString(`Content-Type: text/html; charset="UTF-8"` + "\r\n")
-	msg.WriteString("\r\n") // blank line between headers and body
-	msg.WriteString(`<h1>Hi there</h1><p>This is an <strong>HTML</strong> email.</p>`)
-
-	// Send it
 	addr := host + ":" + port
-	if err := smtp.SendMail(addr, auth,
-		user,
-		[]string{"test@varmail.org"},
-		msg.Bytes(),
-	); err != nil {
-		log.Fatalf("failed to send email: %v", err)
+	if err := smtp.SendMail(addr, auth, user, []string{receiver_email}, body.Bytes()); err != nil {
+		log.Printf("SMTP error: %v", err)
+		http.Error(w, "Failed to send email", http.StatusInternalServerError)
+		return
 	}
 
-	log.Println("Email sent successfully!")
+	fmt.Fprintf(w, "Thank you, %s! Your message has been sent.", fname)
+}
+
+func main() {
+	// Register the /send endpoint
+	http.HandleFunc("/send", sendHandler)
+	log.Println("Server starting on http://localhost:8080")
+
+	// Listen on port 8080 for incoming HTTP requests
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		log.Fatalf("Server failed: %v", err)
+	}
 }
