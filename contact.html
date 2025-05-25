@@ -8,9 +8,10 @@
   <meta name="description" content="contact page for Roberson & Sons Insurance" />
   <link rel="icon" href="./images/logo-images/truck-favicon.svg">
   <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/slideshow.css">
   <link rel="stylesheet" href="./styles/navigation.css">
-  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.4"
+          integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+          crossorigin="anonymous"></script>
 </head>
 <header>
   <div class="topnav">
@@ -19,7 +20,7 @@
     <a href="./index.html">Home</a>
   </div>
   <div class = "biglogo-container">
-    <img class="biglogo" src="/images/logo-images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo">
+    <img class="biglogo" src="/images/official-logos/Roberson Logo.svg" alt="roberson-and-sons-logo">
   </div>
   <h1 class="call">Call us toll free, today! 800-801-0942</h1>
 </header>
@@ -42,21 +43,23 @@
       hx-post="/send"
       hx-target="#result"
       hx-swap="innerHTML"
+      hx-indicator="#sendingIndicator"
       method="post"
     >
-      <label for="fname">First Name</label><br>
-      <input type="text" id="fname" name="fname"><br>
-      <label for="lname">Last Name</label><br>
-      <input type="text" id="lname" name="lname"><br>
-      <label for="email">Email Address</label><br>
-      <input type="text" id="email" name = "email"><br>
-      <label for="subject">Subject</label><br>
-      <input type="text" id="subject" name="subject"><br>
-      <label for="message">Message</label><br>
-      <input type="text" id="message" name="message"><br>
-      <input type="submit" value="Submit">
-
-      <div id="result"></div>
+      <div id="result">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last Name</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email Address</label><br>
+        <input type="text" id="email" name = "email"><br>
+        <label for="subject">Subject</label><br>
+        <input type="text" id="subject" name="subject"><br>
+        <label for="message">Message</label><br>
+        <input type="text" id="message" name="message"><br>
+        <input type="submit" value="Submit">
+        <div id="sendingIndicator" class="hidden">Your message is sending…</div>
+      </div>
     </form>
   </div>
 </body>

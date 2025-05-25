@@ -31,6 +31,12 @@ footer {
     background-color: lightgray;
 }
 
+/* Show the message when htmx-request is present */
+#sendingIndicator.htmx-request {
+  display: block;
+}
+.hidden { display: none; }
+
 /*
 h1, h2 {
     color: #1971c2;
