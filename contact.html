@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link rel="stylesheet" href="./styles/slideshow.css">
   <link rel="stylesheet" href="./styles/navigation.css">
+  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
 </head>
 <header>
   <div class="topnav">
@@ -37,7 +38,12 @@
     </div>
   </p>
   <div class = "form">
-    <form action="https://go.emailer.varmail.org/send" method="POST">
+    <form 
+      hx-post="/send"
+      hx-target="#result"
+      hx-swap="innerHTML"
+      method="post"
+    >
       <label for="fname">First Name</label><br>
       <input type="text" id="fname" name="fname"><br>
       <label for="lname">Last Name</label><br>
@@ -49,6 +55,8 @@
       <label for="message">Message</label><br>
       <input type="text" id="message" name="message"><br>
       <input type="submit" value="Submit">
+
+      <div id="result"></div>
     </form>
   </div>
 </body>

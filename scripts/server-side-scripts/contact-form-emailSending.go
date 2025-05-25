@@ -61,7 +61,7 @@ func sendHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Build the email body
 	var body bytes.Buffer
-	body.WriteString("From: " + user + "\r\n")
+	body.WriteString("From: \"Customer Mailer\" <" + user + ">\r\n")
 	body.WriteString("To: " + receiver_email + "\r\n")
 	body.WriteString("Subject: " + subject + "\r\n")
 	body.WriteString("MIME-Version: 1.0\r\n")
