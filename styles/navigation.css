@@ -1,7 +1,7 @@
 /* got this from: https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: #324A71;
   overflow: hidden;
 }
 
@@ -10,6 +10,8 @@
   float: right;
   color: #f2f2f2;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
