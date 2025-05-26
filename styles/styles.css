@@ -41,6 +41,14 @@ footer {
 }
 .hidden { display: none; }
 
+.insurance-for-imgs {
+    border-radius: 200px;
+}
+
+.office-building-img {
+    border-radius: 10px;
+}
+
 /*
 h1, h2 {
     color: #1971c2;
