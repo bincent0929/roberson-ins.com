@@ -35,19 +35,34 @@ footer {
     background-color: lightgray;
 }
 
+.insurance-for-imgs {
+    border-radius: 200px;
+}
+
+/* OUR TEAM page styling */
+
+.office-building-img-container {
+    text-align: center;
+}
+
+.office-building-img {
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+}
+
+.team-description {
+    text-align: left;
+    margin: 10px 300px 10px 300px;
+}
+
+/* contact page styling */
+
 /* Show the message when htmx-request is present */
 #sendingIndicator.htmx-request {
   display: block;
 }
 .hidden { display: none; }
-
-.insurance-for-imgs {
-    border-radius: 200px;
-}
-
-.office-building-img {
-    border-radius: 10px;
-}
 
 /*
 h1, h2 {

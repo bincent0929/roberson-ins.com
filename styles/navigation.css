@@ -2,12 +2,17 @@
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #324A71;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  display: flex;               /* make the container a flexbox */
+  justify-content: flex-end;   /* push items to the right edge */
+  align-items: center;         /* vertically center, if your bar has a height */
+  gap: 16px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
+  /*float: right;*/
+  float: none;
   color: #f2f2f2;
   text-align: center;
   text-transform: uppercase;
