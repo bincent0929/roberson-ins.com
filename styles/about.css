@@ -1,0 +1,24 @@
+/* OUR TEAM page styling */
+/*
+@media screen and (min-width: 671px) {
+  .team-description-container {
+    margin: 0px 200px 0px 200px
+  }
+}
+*/
+
+.office-building-img-container {
+    text-align: center;
+}
+
+.office-building-img {
+    border-radius: 10px;
+    width: 75%;
+    height: auto;
+}
+
+.team-description-container {
+    text-align: left;
+    margin: auto;
+    max-width: 800px;
+}

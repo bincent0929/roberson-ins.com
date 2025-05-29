@@ -1,0 +1,7 @@
+/* contact page styling */
+
+/* Show the message when htmx-request is present */
+#sendingIndicator.htmx-request {
+  display: block;
+}
+.hidden { display: none; }

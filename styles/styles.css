@@ -1,3 +1,5 @@
+/* all pages styling */
+
 * {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -6,13 +8,15 @@
     text-align: center;
 }
 
+/* footer styling */
+
 footer {
     text-align:center;
 }
 
-.insurance-for {
-    text-align: center;
-}
+/* footer styling */
+
+/* header styling */
 
 .biglogo-container {
     text-align: center;
@@ -20,7 +24,7 @@ footer {
 
 .biglogo {
     height: auto;
-    width: 50%;
+    width: 25%;
 }
 
 .call {
@@ -35,37 +39,4 @@ footer {
     background-color: lightgray;
 }
 
-.insurance-for-imgs {
-    border-radius: 200px;
-}
-
-/* OUR TEAM page styling */
-
-.office-building-img-container {
-    text-align: center;
-}
-
-.office-building-img {
-    border-radius: 10px;
-    width: 50%;
-    height: auto;
-}
-
-.team-description {
-    text-align: left;
-    margin: 10px 300px 10px 300px;
-}
-
-/* contact page styling */
-
-/* Show the message when htmx-request is present */
-#sendingIndicator.htmx-request {
-  display: block;
-}
-.hidden { display: none; }
-
-/*
-h1, h2 {
-    color: #1971c2;
-}
-*/
+/* header styling */
