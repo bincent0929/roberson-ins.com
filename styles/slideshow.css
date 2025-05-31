@@ -22,7 +22,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: rgba(0,0,0,0.8);
+  color: #324A71;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -38,7 +38,7 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: white;
+  background-color: lightgray;
 }
 
 /* Fading animation */
