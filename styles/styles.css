@@ -40,3 +40,31 @@ footer {
 }
 
 /* header styling */
+
+/* Link box styling resources
+    https://www.w3schools.com/Css/css_link.asp
+*/
+.redir-link-container {
+    text-align: center;
+    font-size: 50px;
+}
+
+@media (max-width: 1040px) {
+    .redir-link-container {
+        font-size: 25px;
+    }
+}
+
+.redir-link:link, .redir-link:visited {
+    background-color: #324A71;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+}
+
+.redir-link:hover, .redir-link:active {
+  background-color: #5576ac;
+}
