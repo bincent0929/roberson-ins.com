@@ -5,9 +5,10 @@
   background-color: #324A71;
   /*overflow: hidden;*/
   display: flex;               /* make the container a flexbox */
-  justify-content: flex-end;   /* push items to the right edge */
-  align-items: center;         /* vertically center, if your bar has a height */
+  justify-content: center;   /* horizontally center */
+  align-items: center;         /* vertically center */
   gap: 16px;
+  width: 100%;              /* this makes sure the whole width is spanned */
 }
 
 /* Style the links inside the navigation bar */
@@ -21,16 +22,26 @@
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  border-radius: 10px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #5576ac;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
   background-color: #1971c2;
   color: white;
+}
+
+.nav-cvprs-logo-img {
+  height: 50px;
+  width: 50px;
+}
+
+/* I need to make this go in line with the next div */
+.nav-cvprs-logo-img-container {
+  height: 0px;
 }
