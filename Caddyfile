@@ -11,7 +11,7 @@ roberson-ins.com.varmail.org {
 
     # Everything else falls through to static file serving
     handle {
-        root * /roberson-ins.com
+        root * ./
 
         @stripIndex path_regexp idx ^(.*/)?index\.html$
         redir @stripIndex {http.regexp.idx.1} 301
