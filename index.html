@@ -9,10 +9,10 @@
   <!-- only current doc specific styling -->
   <link rel="stylesheet" href="./styles/tailwind-output.css">
   <!--<link rel="stylesheet" href="./styles/index.css">-->
-  <link rel="stylesheet" href="./styles/slideshow.css">
+  <!--<link rel="stylesheet" href="./styles/slideshow.css">-->
   <!-- only current doc specific styling -->
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/navigation.css">
+  <!--<link rel="stylesheet" href="./styles/styles.css">-->
+  <!--<link rel="stylesheet" href="./styles/navigation.css">-->
   <link rel="prefetch" href="contact" as="document"/>
   <link rel="prefetch" href="about" as="document"/>
 </head>
@@ -34,7 +34,7 @@
     <div>
       <img class="h-auto w-1/4" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo">
     </div>
-    <h1 class="call">Call Today! 1-800-801-0942</h1>
+    <h1 class="p-0 m-0 border-0 text-center text-[#324A71]">Call Today! 1-800-801-0942</h1>
   </div>
 </header>
 <body>
@@ -66,27 +66,38 @@
   -->
   <script src="./scripts/slideshow.js"></script>
 
-  <div class = "insur-for-cont">
-    <div class="box">
+  <div class = "flex flex-col gap-4 text-center lg:flex-row">
+    <div class="lg:flex-1">
       <h2>Insurance For Transporation</h2>
-      <img class="insur-for-imgs" src="./images/truckdriver-300x300.jpg" alt="Truck Driver" >
+      <img class="rounded-[200px]" src="./images/truckdriver-300x300.jpg" alt="Truck Driver" >
     </div>
-    <div class="box">
+    <div class="lg:flex-1">
       <h2>Insurance For Agriculture</h2>
-      <img class="insur-for-imgs" src="/images/rice-field-300x300.jpg" alt="Rice Field" loading="lazy" >
+      <img class="rounded-[200px]" src="/images/rice-field-300x300.jpg" alt="Rice Field" loading="lazy" >
     </div>
-    <div class="box">
+    <div class="lg:flex-1">
       <h2>Insurance For Forestry</h2>
-      <img class="insur-for-imgs" src="./images/axman-300x300.jpg" alt="Axman" loading="lazy" >
+      <img class="rounded-[200px]" src="./images/axman-300x300.jpg" alt="Axman" loading="lazy" >
     </div>
   </div>
-  <div class="redir-link-container"> <!-- styled in styles.css -->
-    <a class="redir-link" href="./about">Click here to learn who we are!</a>
+  <div class="text-center text-[50px] md:text-[25px]"> <!-- styled in styles.css -->
+    <a class="
+      bg-[#324A71]
+      text-white
+      px-2.5
+      py-2.5
+      text-center
+      no-underline
+      inline-block
+      rounded-[20px]
+      hover:bg-[#5576ac]
+      active:bg-[#5576ac]" 
+    href="./about">Click here to learn who we are!</a>
   </div>
   
 </body>
 <footer class="text-center">
-    <div class="facebook">
+    <div>
       <a href="https://www.facebook.com/RobersonIns">Find us on Facebook!</a>
     </div>
     <div class = "copyright">
