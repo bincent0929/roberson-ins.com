@@ -19,8 +19,9 @@
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [443]
-
+	"forwardPorts": [443],
+	
+	"runArgs": ["-p", "0.0.0.0:443:443"]
 	// Configure tool-specific properties.
 	// "customizations": {},
 

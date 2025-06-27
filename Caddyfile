@@ -1,32 +1,32 @@
 roberson-ins.com.varmail.org {
-    # Gzip compression for all responses
-    encode gzip
+	# Gzip compression for all responses
+	encode gzip
 
-    tls internal
+	tls internal
 
-    # Proxy only /send* requests to your local API
-    handle /send* {
-        reverse_proxy 127.0.0.1:8080
-    }
+	# Proxy only /send* requests to your local API
+	handle /send* {
+		reverse_proxy 127.0.0.1:8080
+	}
 
-    # Everything else falls through to static file serving
-    handle {
-        root * ./
+	# Everything else falls through to static file serving
+	handle {
+		root * ./
 
-        @stripIndex path_regexp idx ^(.*/)?index\.html$
-        redir @stripIndex {http.regexp.idx.1} 301
+		@stripIndex path_regexp idx ^(.*/)?index\.html$
+		redir @stripIndex {http.regexp.idx.1} 301
 
-        # Redirect any *.html request → extension-less URL
-        @stripHtml path_regexp strip ^/(.*)\.html$
-        redir @stripHtml /{http.regexp.strip.1} 301
+		# Redirect any *.html request → extension-less URL
+		@stripHtml path_regexp strip ^/(.*)\.html$
+		redir @stripHtml /{http.regexp.strip.1} 301
 
-        try_files {path} {path}.html {path}/index.html =404
-        file_server
-    }
+		try_files {path} {path}.html {path}/index.html =404
+		file_server
+	}
 
-    # Custom error pages
-    handle_errors {
-        rewrite * /{err.status_code}.html
-        file_server
-    }
+	# Custom error pages
+	handle_errors {
+		rewrite * /{err.status_code}.html
+		file_server
+	}
 }
