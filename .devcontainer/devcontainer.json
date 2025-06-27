@@ -11,20 +11,11 @@
 		"ghcr.io/devcontainers-extra/features/caddy:1": {}
 	},
 
-	"postCreateCommand": "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y tmux",
-	
-	"postStartCommand": "tmux has-session -t caddy || tmux new-session -d -s caddy -- caddy run",
+	// installs packages through apt-get (should be optimized for versioning, etc. in the future)
+	"postCreateCommand": "/bin/bash ./.devcontainer/install-packages.sh",
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// makes port 443 available globally. ensure firewall security
 	"forwardPorts": [443],
 	
 	"runArgs": ["-p", "0.0.0.0:443:443"]
-	// Configure tool-specific properties.
-	// "customizations": {},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
 }
