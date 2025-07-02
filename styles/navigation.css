@@ -1,8 +1,6 @@
 /* the styling for the navigation bar */
 /* got this from: https://www.w3schools.com/howto/howto_js_topnav.asp */
 /* Add a black background color to the top navigation */
-@import "tailwindcss";
-
 .topnav {
   background-color: #324A71;
   /*overflow: hidden;*/

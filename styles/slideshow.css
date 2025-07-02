@@ -1,6 +1,5 @@
 /* the styling for the slideshow on the index.html doc */
 /* from w3schools: https://www.w3schools.com/howto/howto_js_slideshow.asp */
-@import "tailwindcss";
 * {box-sizing:border-box}
 
 /* Slideshow container */

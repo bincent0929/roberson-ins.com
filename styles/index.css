@@ -1,0 +1,21 @@
+/* the main page's styling */
+
+.insur-for-imgs {
+    border-radius: 200px;
+}
+
+.insur-for-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 1041px) {
+    .insur-for-cont {
+        flex-direction: row;
+    }
+    .box {
+        flex: 1;
+    }
+}
