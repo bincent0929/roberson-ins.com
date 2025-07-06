@@ -4,6 +4,10 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body, footer {
+    background-color: #EEEEEE;
+  }
+
 /* footer styling */
 
 footer {
