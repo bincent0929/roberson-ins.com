@@ -9,15 +9,21 @@
   <link rel="prefetch" href="contact.html" as="document" />
   <link rel="prefetch" href="index.html" as="document" />
   <link rel="stylesheet" type="text/css" href="styles/output-styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 </head>
-<body class="bg-[#EEEEEE] font-sans text-[#444]">
+<body class="bg-[#EEEEEE]">
   <header>
-    <div class="flex w-full flex-wrap items-center justify-center gap-4 bg-[#324A71] px-2">
+    <div class="flex w-full flex-wrap items-center justify-center gap-2 bg-[#324A71] px-2 py-2 sm:gap-4">
       <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./index.html">Home</a>
       <a class="rounded-[10px] bg-[#1971c2] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./about">About Our Team</a>
       <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./contact.html">Contact</a>
-      <div>
-        <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="https://www.cvprs.com" target="_blank" rel="noopener noreferrer">Need help with the DMV?</a>
+      <div class="flex basis-full items-center justify-center">
+        <a class="inline-flex items-center gap-2 whitespace-nowrap rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="https://www.cvprs.com" target="_blank" rel="noopener noreferrer">
+          <span>Need help with the DMV?</span><img class="h-[50px] w-[50px] shrink-0" src="./images/official-logos/CVPRS-Logo.svg" alt="cvprs-logo" />
+        </a>
       </div>
     </div>
     <div class="bg-gray-300 py-3">
@@ -28,7 +34,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="font-sans text-[#444]">
     <div class="mx-auto my-10 max-w-[650px] px-[10px] text-[18px] leading-[1.6]">
       <h1 class="mb-4 text-4xl font-bold leading-[1.2] text-black">Our Team</h1>
       <p>Roberson & Sons Insurance Services is a commercial insurance broker since 1989 servicing Transportation, Agriculture, and Forestry, and all other commercial exposures. We combine research with active marketing to maintain a wide array of the best markets to offer sound coverage comparisons year after year in our ever-changing marketplace.</p>
@@ -53,7 +59,9 @@
 
   <footer class="mt-10 py-4 text-center">
     <div>
-      <a href="https://www.facebook.com/RobersonIns">Find us on Facebook!</a>
+      <a href="https://www.facebook.com/RobersonIns">
+        <span>Check us out on Facebook: <i class="fa-brands fa-facebook text-2xl"></i></span>
+      </a>
     </div>
     <div>
       © 2025 Roberson & Sons Insurance Services
