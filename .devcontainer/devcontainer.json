@@ -1,12 +1,9 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
 	"name": "Debian",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:bookworm",
 	"features": {
-		"ghcr.io/devcontainers/features/go:1": {},
-		"ghcr.io/devcontainers-community/npm-features/typescript:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers-extra/features/caddy:1": {}
 	},
 
@@ -16,5 +13,17 @@
 	// makes port 443 available globally. ensure firewall security
 	"forwardPorts": [443],
 	
-	"runArgs": ["-p", "0.0.0.0:443:443"]
+	"runArgs": [
+		"-p",
+		"0.0.0.0:443:443"
+	],
+	
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"matthewpi.caddyfile-support",
+				"openai.chatgpt"
+			]
+		}
+	}
 }

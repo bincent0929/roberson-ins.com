@@ -1,92 +1,89 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en-us">
 <head>
   <meta charset="UTF-8" />
   <title>Roberson & Sons Insurance</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="contact page for Roberson & Sons Insurance" />
-  <link rel="icon" href="./images/logo-images/truck-favicon.svg">
-  <!-- only current doc specific styling -->
-  <link rel="stylesheet" href="./styles/contact.css">
-  <!-- only current doc specific styling -->
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/navigation.css">
-  <!-- htmx inclusion -->
+  <link rel="icon" href="./images/logo-images/truck-favicon.svg" />
   <script src="https://unpkg.com/htmx.org@2.0.4"
           integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
           crossorigin="anonymous"></script>
-  <!-- htmx inclusion -->
-  <link rel="prefetch" href="./" as="document"/>
-  <link rel="prefetch" href="about" as="document"/>
+  <link rel="prefetch" href="index.html" as="document" />
+  <link rel="prefetch" href="about.html" as="document" />
+  <link rel="stylesheet" type="text/css" href="styles/output-styles.css" />
 </head>
-<header>
-  <!-- got this from https://www.w3schools.com/howto/howto_js_topnav.asp -->
-  <div class="topnav">
-    <!-- <img class="toplogo" src="/images/logo-images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo"> -->
-    <a href="./">Home</a>
-    <a href="./about">About Our Team</a>
-    <a class="active" href="./contact">Contact</a>
-    <div class="cvprs-referral">
-      <a href="https://www.cvprs.com" target="_blank">Need help with the DMV?</a>
-    </div>
-  </div>
-  <div class = "logo-call-container">
-    <div class = "biglogo-container">
-      <img class="biglogo" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo">
-    </div>
-    <h1 class="call">Call us toll free, today! 1-800-801-0942</h1>
-  </div>
-</header>
-<body>
-  <div class="contact-information">
-    <h1>Contact</h1>
-    <div>
-      Email: <a href="mailto:info@roberson-ins.com">info@roberson-ins.com</a>
-    </div>
-    <div>
-      Local: 530-365-1009 | Fax: 530-247-7808
-    </div>
-    <div>
-      P.O. Box 491719
-      Redding, CA. 96049-1719
-    </div>
-    <div>
-      Agency Lic# OC66781
-      Licensed for CA, OR, WA, NV, TX, & AZ
-    </div>
-  </div>
-  <div class = "form">
-    <form 
-      hx-post="/send"
-      hx-target="#result"
-      hx-swap="innerHTML"
-      hx-indicator="#sendingIndicator"
-      method="post"
-    >
-      <div id="result">
-        <label for="fname">First Name</label><br>
-        <input type="text" id="fname" name="fname"><br>
-        <label for="lname">Last Name</label><br>
-        <input type="text" id="lname" name="lname"><br>
-        <label for="email">Email Address</label><br>
-        <input type="text" id="email" name = "email"><br>
-        <label for="subject">Subject</label><br>
-        <input type="text" id="subject" name="subject"><br>
-        <label for="message">Message</label><br>
-        <input type="text" id="message" name="message"><br>
-        <input type="submit" value="Submit">
-        <div id="sendingIndicator" class="hidden">Your message is sending…</div>
+<body class="bg-[#EEEEEE] font-sans text-[#444]">
+  <header>
+    <div class="flex w-full flex-wrap items-center justify-center gap-4 bg-[#324A71] px-2">
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./index.html">Home</a>
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./about.html">About Our Team</a>
+      <a class="rounded-[10px] bg-[#1971c2] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./contact.html">Contact</a>
+      <div>
+        <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="https://www.cvprs.com" target="_blank" rel="noopener noreferrer">Need help with the DMV?</a>
       </div>
-    </form>
-  </div>
-</body>
-<footer>
-    <div class="facebook">
+    </div>
+    <div class="bg-gray-300 py-3">
+      <div class="text-center">
+        <img class="mx-auto h-auto w-2/3 sm:w-1/2 lg:w-1/4" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo" />
+      </div>
+      <h1 class="m-0 p-0 text-center text-2xl font-bold text-[#324A71]">Call us toll free, today! 1-800-801-0942</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="mx-auto my-10 max-w-[650px] px-[10px] text-[18px] leading-[1.6]">
+      <h1 class="mb-4 text-4xl font-bold leading-[1.2] text-black">Contact</h1>
+      <div>
+        Email: <a href="mailto:info@roberson-ins.com">info@roberson-ins.com</a>
+      </div>
+      <div>
+        Local: 530-365-1009 | Fax: 530-247-7808
+      </div>
+      <div>
+        P.O. Box 491719
+        Redding, CA. 96049-1719
+      </div>
+      <div>
+        Agency Lic# OC66781
+        Licensed for CA, OR, WA, NV, TX, & AZ
+      </div>
+    </div>
+
+    <div class="mx-auto my-10 max-w-[650px] px-[10px] text-[18px] leading-[1.6]">
+      <form
+        hx-post="/send"
+        hx-target="#result"
+        hx-swap="innerHTML"
+        hx-indicator="#sendingIndicator"
+        method="post"
+        class="space-y-2"
+      >
+        <div id="result" class="space-y-2">
+          <label for="fname" class="block">First Name</label>
+          <input type="text" id="fname" name="fname" class="w-full rounded border border-gray-400 px-3 py-2" />
+          <label for="lname" class="block">Last Name</label>
+          <input type="text" id="lname" name="lname" class="w-full rounded border border-gray-400 px-3 py-2" />
+          <label for="email" class="block">Email Address</label>
+          <input type="text" id="email" name="email" class="w-full rounded border border-gray-400 px-3 py-2" />
+          <label for="subject" class="block">Subject</label>
+          <input type="text" id="subject" name="subject" class="w-full rounded border border-gray-400 px-3 py-2" />
+          <label for="message" class="block">Message</label>
+          <input type="text" id="message" name="message" class="w-full rounded border border-gray-400 px-3 py-2" />
+          <input type="submit" value="Submit" class="cursor-pointer rounded bg-[#324A71] px-4 py-2 font-bold text-white hover:bg-[#5576ac]" />
+          <div id="sendingIndicator" class="hidden [&.htmx-request]:block">Your message is sending…</div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="mt-10 py-4 text-center">
+    <div>
       <a href="https://www.facebook.com/RobersonIns">Find us on Facebook!</a>
     </div>
-    <div class = "copyright">
-        © 2025 Roberson & Sons Insurance Services
+    <div>
+      © 2025 Roberson & Sons Insurance Services
     </div>
-</footer>
+  </footer>
+</body>
 </html>

@@ -5,92 +5,78 @@
   <title>Roberson & Sons Insurance</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="home page for Roberson & Sons Insurance" />
-  <link rel="icon" href="./images/logo-images/truck-favicon.svg">
-  <!-- only current doc specific styling -->
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/slideshow.css">
-  <!-- only current doc specific styling -->
-  <link rel="stylesheet" href="./styles/styles.css">
-  <link rel="stylesheet" href="./styles/navigation.css">
-  <link rel="prefetch" href="contact" as="document"/>
-  <link rel="prefetch" href="about" as="document"/>
+  <link rel="icon" href="./images/logo-images/truck-favicon.svg" />
+  <link rel="prefetch" href="contact.html" as="document" />
+  <link rel="prefetch" href="about.html" as="document" />
+  <link rel="stylesheet" type="text/css" href="styles/output-styles.css" />
 </head>
-<header>
-  <!-- got this from https://www.w3schools.com/howto/howto_js_topnav.asp -->
-  <div class="topnav">
-    <!-- <img class="toplogo" src="/images/logo-images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo"> -->
-    <a class="active" href="./">Home</a>
-    <a href="./about">About Our Team</a>
-    <a href="./contact">Contact</a>
-    <div class="cvprs-referral">
-      <div class="nav-cvprs-logo-img-container">
-        <img class="nav-cvprs-logo-img" src="./images/official-logos/CVPRS-Logo.svg" alt="cvprs-logo">
+<body class="bg-[#EEEEEE] font-sans">
+  <header>
+    <div class="flex w-full flex-wrap items-center justify-center gap-4 bg-[#324A71] px-2">
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac] bg-[#1971c2]" href="./index.html">Home</a>
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./about.html">About Our Team</a>
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./contact.html">Contact</a>
+      <div class="flex items-center gap-2">
+        <a class="inline-flex items-center gap-2 whitespace-nowrap rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="https://www.cvprs.com" target="_blank" rel="noopener noreferrer">
+          <span>Need help with the DMV?</span><img class="h-[50px] w-[50px] shrink-0" src="./images/official-logos/CVPRS-Logo.svg" alt="cvprs-logo" />
+        </a>
       </div>
-      <a href="https://www.cvprs.com" target="_blank">Need help with the DMV?</a>
     </div>
-  </div>
-  <div class = "logo-call-container">
-    <div class = "biglogo-container">
-      <img class="biglogo" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo">
+    <div class="bg-gray-300 py-3">
+      <div class="text-center">
+        <img class="mx-auto h-auto w-2/3 sm:w-1/2 lg:w-1/4" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo" />
+      </div>
+      <h1 class="m-0 p-0 text-center text-2xl font-bold text-[#324A71]">Call Today! 1-800-801-0942</h1>
     </div>
-    <h1 class="call">Call Today! 1-800-801-0942</h1>
-  </div>
-</header>
-<body>
-  <!-- got this from https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
+  </header>
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <img src="./images/main-page-slideshow/optimized-semis-1800x900.jpg" alt="semi trucks" style="width:100%">
+  <main>
+    <div class="relative mx-auto max-w-[1500px]">
+      <div class="mySlides hidden animate-[fade_1.5s]">
+        <img src="./images/main-page-slideshow/optimized-semis-1800x900.jpg" alt="semi trucks" class="w-full" />
+      </div>
+
+      <div class="mySlides hidden animate-[fade_1.5s]">
+        <img src="./images/main-page-slideshow/optimized-combine-1800x900.jpg" alt="combine in a field" class="w-full" />
+      </div>
+
+      <div class="mySlides hidden animate-[fade_1.5s]">
+        <img src="./images/main-page-slideshow/optimized-logging-1800x900.webp" alt="logging machine" class="w-full" />
+      </div>
+
+      <a class="absolute top-1/2 left-0 -translate-y-1/2 cursor-pointer select-none rounded-r-[3px] px-4 py-4 text-[18px] font-bold text-[#324A71] transition hover:bg-gray-300" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="absolute top-1/2 right-0 -translate-y-1/2 cursor-pointer select-none rounded-l-[3px] px-4 py-4 text-[18px] font-bold text-[#324A71] transition hover:bg-gray-300" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <div class="mySlides fade">
-      <img src="./images/main-page-slideshow/optimized-combine-1800x900.jpg" alt="combine in a field" style="width:100%">
+    <script src="./scripts/slideshow.js"></script>
+
+    <div class="my-8 flex flex-col gap-4 text-center lg:flex-row">
+      <div class="flex-1 px-2">
+        <h2 class="text-2xl font-semibold">Insurance For Transporation</h2>
+        <img class="mx-auto rounded-full" src="./images/truckdriver-300x300.jpg" alt="Truck Driver" />
+      </div>
+      <div class="flex-1 px-2">
+        <h2 class="text-2xl font-semibold">Insurance For Agriculture</h2>
+        <img class="mx-auto rounded-full" src="/images/rice-field-300x300.jpg" alt="Rice Field" loading="lazy" />
+      </div>
+      <div class="flex-1 px-2">
+        <h2 class="text-2xl font-semibold">Insurance For Forestry</h2>
+        <img class="mx-auto rounded-full" src="./images/axman-300x300.jpg" alt="Axman" loading="lazy" />
+      </div>
     </div>
 
-    <div class="mySlides fade">
-      <img src="./images/main-page-slideshow/optimized-logging-1800x900.webp" alt="logging machine" style="width:100%">
+    <div class="text-center text-[25px] lg:text-[50px]">
+      <a class="inline-block rounded-[20px] bg-[#324A71] px-[10px] py-[10px] text-white no-underline hover:bg-[#5576ac]" href="./about.html">Click here to learn who we are!</a>
     </div>
+  </main>
 
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <!-- 
-    needs to run after to be able to change the display state for the slides
-    this is due to the fact that the script can't change the value if it's not already
-    on the screen or loaded.
-  -->
-  <script src="./scripts/slideshow.js"></script>
-
-  <div class = "insur-for-cont">
-    <div class="box">
-      <h2>Insurance For Transporation</h2>
-      <img class="insur-for-imgs" src="./images/truckdriver-300x300.jpg" alt="Truck Driver" >
-    </div>
-    <div class="box">
-      <h2>Insurance For Agriculture</h2>
-      <img class="insur-for-imgs" src="/images/rice-field-300x300.jpg" alt="Rice Field" loading="lazy" >
-    </div>
-    <div class="box">
-      <h2>Insurance For Forestry</h2>
-      <img class="insur-for-imgs" src="./images/axman-300x300.jpg" alt="Axman" loading="lazy" >
-    </div>
-  </div>
-  
-  <div class="redir-link-container"> <!-- styled in styles.css -->
-    <a class="redir-link" href="./about">Click here to learn who we are!</a>
-  </div>
-  
-</body>
-<footer>
+  <footer class="mt-10 py-4 text-center">
     <div>
       <a href="https://www.facebook.com/RobersonIns">Find us on Facebook!</a>
     </div>
     <div>
-        © 2025 Roberson & Sons Insurance Services
+      © 2025 Roberson & Sons Insurance Services
     </div>
-</footer>
+  </footer>
+</body>
 </html>

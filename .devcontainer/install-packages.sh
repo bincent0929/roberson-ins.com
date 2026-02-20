@@ -12,4 +12,4 @@ sudo apt-get clean
 sudo rm -rf /var/lib/apt/lists/*
 
 # Create tmux sessions
-tmux has-session -t caddy || tmux new-session -d -s caddy -- caddy run
+tmux has-session -t caddy || tmux new-session -d -s caddy -- caddy run --config dev.caddyfile

@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="UTF-8" />
-    <title>Roberson & Sons Insurance</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="home page for Roberson & Sons Insurance" />
-    <link rel="icon" href="./images/logo-images/truck-favicon.svg">
-    <!-- only current doc specific styling -->
-    <link rel="stylesheet" href="./styles/about.css">
-    <!-- only current doc specific styling -->
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/navigation.css">
-    <link rel="prefetch" href="contact" as="document"/>
-  <link rel="prefetch" href="./" as="document"/>
+  <meta charset="UTF-8" />
+  <title>Roberson & Sons Insurance</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="home page for Roberson & Sons Insurance" />
+  <link rel="icon" href="./images/logo-images/truck-favicon.svg" />
+  <link rel="prefetch" href="contact.html" as="document" />
+  <link rel="prefetch" href="index.html" as="document" />
+  <link rel="stylesheet" type="text/css" href="styles/output-styles.css" />
 </head>
-<header>
-  <!-- got this from https://www.w3schools.com/howto/howto_js_topnav.asp -->
-  <div class="topnav">
-    <!-- <img class="toplogo" src="/images/logo-images/new-roberson-and-sons-logo-no-scene.svg" alt="roberson-and-sons-logo"> -->
-    <a href="./">Home</a>
-    <a class="active" href="./about">About Our Team</a>
-    <a href="./contact">Contact</a>
-    <div class="cvprs-referral">
-      <a href="https://www.cvprs.com" target="_blank">Need help with the DMV?</a>
+<body class="bg-[#EEEEEE] font-sans text-[#444]">
+  <header>
+    <div class="flex w-full flex-wrap items-center justify-center gap-4 bg-[#324A71] px-2">
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./index.html">Home</a>
+      <a class="rounded-[10px] bg-[#1971c2] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./about">About Our Team</a>
+      <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="./contact.html">Contact</a>
+      <div>
+        <a class="rounded-[10px] px-4 py-[14px] text-[17px] font-bold uppercase text-[#f2f2f2] no-underline hover:bg-[#5576ac]" href="https://www.cvprs.com" target="_blank" rel="noopener noreferrer">Need help with the DMV?</a>
+      </div>
     </div>
-  </div>
-  <div class = "logo-call-container">
-    <div class = "biglogo-container">
-      <img class="biglogo" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo">
+    <div class="bg-gray-300 py-3">
+      <div class="text-center">
+        <img class="mx-auto h-auto w-2/3 sm:w-1/2 lg:w-1/4" src="/images/official-logos/Roberson-Logo.svg" alt="roberson-and-sons-logo" />
+      </div>
+      <h1 class="m-0 p-0 text-center text-2xl font-bold text-[#324A71]">Call Today! 1-800-801-0942</h1>
     </div>
-    <h1 class="call">Call Today! 1-800-801-0942</h1>
-  </div>
-</header>
-<body>
-    <div class="team-description-container">
-        <h1>Our Team</h1>
-        <p>Roberson & Sons Insurance Services is a commercial insurance broker since 1989 servicing Transportation, Agriculture, and Forestry, and all other commercial exposures. We combine research with active marketing to maintain a wide array of the best markets to offer sound coverage comparisons year after year in our ever-changing marketplace.</p>
-        <p>Our agency goal is to provide stable coverage with superior service.</p>
-        <div class="office-building-img-container">
-          <img class="office-building-img" src="./images/building-images/optimized-Roberson-Building.webp" alt="A picture of the Roberon Insurance building">
-        </div>
-        <p>We work to earn the privilege to offer a proposal for coverage. With necessary details, we send applications to our carriers and then our experience goes to work. Dealing with several of the best Transportation, Agriculture, and Forestry insurance companies, we have created long term relationships with key people in the industry that help to manage an insurance policy that works for you. Underwriters recognize that our agency provides complete and accurate information and return the favor with the best premiums and coverages. Claims Adjusters know the reputation we have built to help our clients when recovering from a loss.</p>
-        <p>Our experienced staff is committed to help you tailor your insurance decisions to the demands of your business. We are at the office for standard hours and our agents are reachable through the office after hours in case of an emergency.</p>
-        <p>At the end of the day, we are not here to just “quote” a policy. We want you to feel as though you have made the right choice with a business partner to consult and develop a long-term relationship of success in business.</p>
-        <p><strong><em>Best Regards, Eric Roberson and The TEAM at Roberson & Sons Insurance Services.</em></strong></p>
+  </header>
+
+  <main>
+    <div class="mx-auto my-10 max-w-[650px] px-[10px] text-[18px] leading-[1.6]">
+      <h1 class="mb-4 text-4xl font-bold leading-[1.2] text-black">Our Team</h1>
+      <p>Roberson & Sons Insurance Services is a commercial insurance broker since 1989 servicing Transportation, Agriculture, and Forestry, and all other commercial exposures. We combine research with active marketing to maintain a wide array of the best markets to offer sound coverage comparisons year after year in our ever-changing marketplace.</p>
+      <p class="mt-4">Our agency goal is to provide stable coverage with superior service.</p>
+      <div class="my-6 text-center">
+        <img class="mx-auto h-auto w-3/4 rounded-[10px]" src="./images/building-images/optimized-Roberson-Building.webp" alt="A picture of the Roberon Insurance building" />
+      </div>
+      <p>We work to earn the privilege to offer a proposal for coverage. With necessary details, we send applications to our carriers and then our experience goes to work. Dealing with several of the best Transportation, Agriculture, and Forestry insurance companies, we have created long term relationships with key people in the industry that help to manage an insurance policy that works for you. Underwriters recognize that our agency provides complete and accurate information and return the favor with the best premiums and coverages. Claims Adjusters know the reputation we have built to help our clients when recovering from a loss.</p>
+      <p class="mt-4">Our experienced staff is committed to help you tailor your insurance decisions to the demands of your business. We are at the office for standard hours and our agents are reachable through the office after hours in case of an emergency.</p>
+      <p class="mt-4">At the end of the day, we are not here to just “quote” a policy. We want you to feel as though you have made the right choice with a business partner to consult and develop a long-term relationship of success in business.</p>
+      <p class="mt-4"><strong><em>Best Regards, Eric Roberson and The TEAM at Roberson & Sons Insurance Services.</em></strong></p>
     </div>
-    <div class="call contact-ref">
-        Give us a call at 1-800-801-0942!
+
+    <div class="text-center text-[25px] lg:text-[50px] text-[#324A71]">
+      Give us a call at 1-800-801-0942!
     </div>
-    <div class="redir-link-container"> <!-- styled in styles.css -->
-      <a class="redir-link" href="./contact">Or if you want to send us a quick message, click here!</a>
+
+    <div class="mt-6 text-center text-[25px] lg:text-[50px]">
+      <a class="inline-block rounded-[20px] bg-[#324A71] px-[10px] py-[10px] text-white no-underline hover:bg-[#5576ac]" href="./contact.html">Or if you want to send us a quick message, click here!</a>
     </div>
-</body>
-<footer>
+  </main>
+
+  <footer class="mt-10 py-4 text-center">
     <div>
       <a href="https://www.facebook.com/RobersonIns">Find us on Facebook!</a>
     </div>
-    <div class = "copyright">
-        © 2025 Roberson & Sons Insurance Services
+    <div>
+      © 2025 Roberson & Sons Insurance Services
     </div>
-</footer>
+  </footer>
+</body>
 </html>

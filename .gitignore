@@ -1,2 +1,7 @@
 # rest
 scripts/slideshow.js
+
+# npm dependencies
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml

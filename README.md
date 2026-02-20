@@ -1,3 +1,5 @@
+make sure to run `pnpm install` and then `pnpm build` to get the dependencies. I will add a build to do the typescript and tailwindcss compiling eventaully.
+
 This is the code for a rough website for my Dad's insurance brokering agency.
 
 The CSS still needs to be worked on and pages would need to be added for processing different forms.
